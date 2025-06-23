@@ -56,7 +56,7 @@ public class AddCarController extends HttpServlet{
                 good.setGoods_name(rs.getString("goods_name"));
                 good.setUnitprice(rs.getString("unitprice"));
                 good.setDetails(rs.getString("details"));
-                good.setPic(rs.getString("photo"));
+                good.setPhoto(rs.getString("photo"));
 
 
             }
@@ -69,7 +69,7 @@ public class AddCarController extends HttpServlet{
             stmt.setString(3,good.getUnitprice());
             stmt.setString(4,"1");
             stmt.setString(5,user_id.toString());
-            stmt.setString(6, good.getPic());
+            stmt.setString(6, good.getPhoto());
             int res=stmt.executeUpdate();//执行sql语句
             if (res>0){
                 System.out.println("插入成功");

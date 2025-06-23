@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import shop_servlet.Register;
+import service.Register;
 
 @WebServlet("/login.do")
 public class LoginController extends HttpServlet{

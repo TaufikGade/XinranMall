@@ -66,3 +66,54 @@ CREATE TABLE IF NOT EXISTS order_detail (
 
 );
 
+INSERT INTO goods (
+    goods_id,
+    goods_name,
+    category,
+    stock,
+    factory,
+    photo,
+    unitprice,
+    details,
+    add_time,
+    change_time,
+    good_state
+) VALUES (
+             '10001',
+             'xiaomi 12x',
+             '手机',
+             100,
+             '小米',
+             'images/63e15f377e87212d460592b4a1369ccd.jpg',
+             3199.00,
+             ' 小米12X，骁龙870，120Hz AMOLED屏幕，67W快充。',
+             UNIX_TIMESTAMP(),
+             UNIX_TIMESTAMP(),
+             0
+         );
+
+INSERT INTO goods (
+    goods_id,
+    goods_name,
+    category,
+    stock,
+    factory,
+    photo,
+    unitprice,
+    details,
+    add_time,
+    change_time,
+    good_state
+) VALUES (
+             '10001',
+             'xiaomi 12x',
+             '手机',
+             100,
+             '小米',
+             'images/phone/63e15f377e87212d460592b4a1369ccd.jpg',
+             3199.00,
+             ' 小米12X，骁龙870，120Hz AMOLED屏幕，67W快充。',
+             UNIX_TIMESTAMP(),
+             UNIX_TIMESTAMP(),
+             0
+         );

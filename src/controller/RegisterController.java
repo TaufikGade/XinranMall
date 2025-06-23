@@ -1,6 +1,6 @@
 package controller;
 
-import shop_servlet.Register;
+import service.Register;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

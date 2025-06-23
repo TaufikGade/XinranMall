@@ -5,14 +5,15 @@ public class Good {
     private String goods_name;
     private String unitprice;
     private String details;
-    private String pic;
+    private String photo;
 
-    public String getPic() {
-        return pic;
+    // 修改 getter 方法为 getPhoto()
+    public String getPhoto() {
+        return photo;
     }
 
-    public void setPic(String pic) {
-        this.pic = pic;
+    public void setPhoto(String photo) {
+        this.photo = photo;
     }
 
     public String getGoods_id() {
@@ -49,15 +50,10 @@ public class Good {
 
     @Override
     public String toString() {
-        return "User [goods_id=" + goods_id + ", goods_name=" + goods_name + ", unitprice=" + unitprice + ", details=" + details + "]";
-    }
-
-    public Good(String goods_id, String goods_name, String unitprice, String details) {
-        super();
-        this.goods_id = goods_id;
-        this.goods_name = goods_name;
-        this.unitprice = unitprice;
-        this.details = details;
+        return "Good [goods_id=" + goods_id +
+                ", goods_name=" + goods_name +
+                ", unitprice=" + unitprice +
+                ", details=" + details + ", photo=" + photo;
     }
 
     public Good() {

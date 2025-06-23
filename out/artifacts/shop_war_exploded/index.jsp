@@ -128,7 +128,7 @@
             <div class="nei_pohot">
                 <ul>
                     <li class="phone_tu">
-                        <a href="./detail.do?id=phone01">
+                        <a href="./detail.do?id=10001">
                             <div class="ph">
                                 <img src="images/phone/63e15f377e87212d460592b4a1369ccd.jpg" >
                             </div>

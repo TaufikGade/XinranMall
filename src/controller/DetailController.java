@@ -44,14 +44,14 @@ public class DetailController extends HttpServlet{
                 good.setGoods_name(rs.getString("goods_name"));
                 good.setUnitprice(rs.getString("unitprice"));
                 good.setDetails(rs.getString("details"));
-                good.setPic(rs.getString("photo"));
+                good.setPhoto(rs.getString("photo"));
 
 
             }
             connection.close();
 
             request.getSession().setAttribute("good", good);
-            response.sendRedirect("phone.jsp");
+            response.sendRedirect("goods.jsp");
 
 
         } catch (Exception e) {

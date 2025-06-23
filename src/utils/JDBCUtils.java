@@ -44,7 +44,4 @@ public class JDBCUtils {
         closeQuietly(st);
         closeQuietly(conn);
     }
-
-
-    
 }

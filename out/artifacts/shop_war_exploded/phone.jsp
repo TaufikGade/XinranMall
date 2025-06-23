@@ -2,14 +2,7 @@
 <%@ page import="java.sql.Connection" %>
 <%@page import="java.sql.*" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-
-<%--
-  Created by IntelliJ IDEA.
-  User: 123
-  Date: 2022/1/4
-  Time: 12:09
-  To change this template use File | Settings | File Templates.
---%>
+<c:set var="good" value="${sessionScope.good}" />
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
     <html>
     <head>
@@ -54,7 +47,9 @@
         <div class="w">
             <div class="preview" id="preview">
                 <div class="photo_xi">
-                    <img src="${good.pic}" width="350px">
+    <p>图片路径：${good.photo}</p> <!-- 调试用，显示图片路径 -->
+                    <img src="${good.photo}" width="350px">
+                    
                 </div>
             </div>
             <div class="itemInfo-wrap">
