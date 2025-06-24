@@ -32,12 +32,28 @@ CREATE TABLE IF NOT EXISTS goods (
 );
 
 -- 购物车表
+# CREATE TABLE IF NOT EXISTS cart (
+#     goods_id VARCHAR(10) PRIMARY KEY NOT NULL,
+#     user_id VARCHAR(10) PRIMARY KEY NOT NULL ,
+#     goods_name VARCHAR(100) NOT NULL,
+#     unitprice DECIMAL(10,2) NOT NULL,
+#     quantity INT(11) NOT NULL,
+#     FOREIGN KEY (goods_id) REFERENCES goods(goods_id)
+# );
 CREATE TABLE IF NOT EXISTS cart (
-    goods_id VARCHAR(10) PRIMARY KEY NOT NULL,
+    cart_id INT(11) AUTO_INCREMENT PRIMARY KEY,  -- 自增主键
+    user_id VARCHAR(10) NOT NULL,
+    goods_id VARCHAR(10) NOT NULL,
     goods_name VARCHAR(100) NOT NULL,
     unitprice DECIMAL(10,2) NOT NULL,
-    quantity INT(11) NOT NULL,
-    FOREIGN KEY (goods_id) REFERENCES goods(goods_id)
+    quantity INT(11) NOT NULL DEFAULT 1,
+    pic VARCHAR(255),
+    create_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    update_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    UNIQUE KEY unique_user_goods (user_id, goods_id),  -- 唯一索引防重复
+    FOREIGN KEY (goods_id) REFERENCES goods(goods_id),
+    FOREIGN KEY (user_id) REFERENCES user(user_id),
+    INDEX idx_user_id (user_id)  -- 用户ID索引，提高查询效率
 );
 
 -- 订单表
@@ -66,31 +82,6 @@ CREATE TABLE IF NOT EXISTS order_detail (
 
 );
 
-INSERT INTO goods (
-    goods_id,
-    goods_name,
-    category,
-    stock,
-    factory,
-    photo,
-    unitprice,
-    details,
-    add_time,
-    change_time,
-    good_state
-) VALUES (
-             '10001',
-             'xiaomi 12x',
-             '手机',
-             100,
-             '小米',
-             'images/63e15f377e87212d460592b4a1369ccd.jpg',
-             3199.00,
-             ' 小米12X，骁龙870，120Hz AMOLED屏幕，67W快充。',
-             UNIX_TIMESTAMP(),
-             UNIX_TIMESTAMP(),
-             0
-         );
 
 INSERT INTO goods (
     goods_id,

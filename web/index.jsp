@@ -44,11 +44,11 @@
                 <!-- 个人中心图标 -->
                 <a href="manage.jsp" title="个人中心" style="display: inline-block; height: 28px; margin-right: 16px;">
                     <svg xmlns="http://www.w3.org/2000/svg" style="height:28px;width:28px;fill:black;" viewBox="0 0 24 24">
-                        <path d="M12 12c2.7 0 5-2.3 5-5s-2.3-5-5-5-5 2.3-5 5 2.3 5 5 5zm0 2c-3.3 0-10 1.7-10 5v3h20v-3c0-3.3-6.7-5-10-5z"/>
+                        <path d="M12 12c2.7 0 5-2.3 5-5s-2.3-5-5-5-5 2.3-5 5 2.3 5 5 5zm0 2c-3.3 0-10 1.7-10 5v3h20v-3c0-3.3-6.7-5-10-5z"></path>
                     </svg>
                 </a>
                 <!-- 购物车图标 -->
-                <a href="car.jsp" title="购物车" style="display: inline-block; height: 28px;">
+                <a href="cart.jsp" title="购物车" style="display: inline-block; height: 28px;">
                     <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
                          viewBox="0 0 456.029 456.029"
                          style="height: 28px; width: 28px; fill: black;">

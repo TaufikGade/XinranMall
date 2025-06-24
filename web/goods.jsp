@@ -18,7 +18,7 @@
                     <a href="index.jsp">商城首页</a>
                 </div>
                 <div class="car">
-                    <a href="car.jsp"><img src="images/购物车.png" height="28px">
+                    <a href="cart.jsp"><img src="images/购物车.png" height="28px">
                         <span>购物车</span>
                     </a>
                 </div>
